@@ -1,0 +1,83 @@
+h2 {
+  color: #ddd;
+  margin: 0 45%;
+}
+
+button {
+  padding: 2px 30px;
+  font-size: 20px;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  scrollbar-color: #000000 #ffffff;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+  margin: 10px 0;
+}
+
+textarea {
+  width: 100%;
+  overflow-y: auto;
+  resize: none;
+}
+
+.content {
+  width: 70%;
+  margin: 0 15%;
+}
+
+.selectable {
+  -webkit-touch-callout: all;
+  -webkit-user-select: all;
+  -khtml-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+textarea,
+input,
+output {
+  background: white;
+  font-size: 16px;
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva;
+  border: 10px groove grey;
+  border-radius: 25px;
+}
+
+textarea,
+output {
+  min-height: 150px;
+}
+
+output {
+  display: block;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+button {
+  appearance: none;
+  border: .2em solid #ffffff;
+  background: hsl(0 0 0/0);
+  padding: .85em 1.5em;
+  color: #ffffff;
+  border-radius: 2em;
+  transition: 1s;
+  &:hover, &:focus, &:active {
+    background: #ffffff;
+    color: #000000;
+  }
+}
