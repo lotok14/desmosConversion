@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <meta charset="utf-8" />
-  <title>Desmos Converter</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <title>Desmos Converter</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-  <div class="content">
-    <div>
-      <img src="logo.png">
+    <div class="content">
+        <div>
+            <img src="logo.png">
+        </div>
+        <div>
+            <textarea id="input" placeholder="input" oninput="handleConvertClick()"></textarea>
+        </div>
+        <div>
+            <button id="copy_to_clipboard_button">Copy to clipboard</button>
+        </div>
+        <div>
+            <output class="selectable" id="output"></output>
+        </div>
     </div>
-    <div>
-      <h2>Input</h2>
-      <textarea id="input"></textarea>
-    </div>
-    <button id="convert">convert</button>
-    <div>
-      <h2>Output</h2>
-      <button id="copy_to_clipboard_button">Copy to clipboard</button>
-      <output class="selectable" id="output"></output>
-    </div>
-  </div>
-  
-  <script src="convert.js"></script>
+
+    <script src="convert.js"></script>
 </body>
 
 </html>
