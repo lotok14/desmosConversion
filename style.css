@@ -1,83 +1,81 @@
-h2 {
-  color: #ddd;
-  margin: 0 45%;
-}
-
-button {
-  padding: 2px 30px;
-  font-size: 20px;
-  width: 100%;
+* {
+    box-sizing: border-box;
 }
 
 img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 html,
 body {
-  scrollbar-color: #000000 #ffffff;
-  background-color: #000000;
-  margin: 0;
-  padding: 0;
-  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scrollbar-color: #000000 #ffffff;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 div {
-  margin: 10px 0;
-}
-
-textarea {
-  width: 100%;
-  overflow-y: auto;
-  resize: none;
+    margin: 10px 0;
 }
 
 .content {
-  width: 70%;
-  margin: 0 15%;
+    width: 70%;
+    margin: 0 15%;
 }
 
 .selectable {
-  -webkit-touch-callout: all;
-  -webkit-user-select: all;
-  -khtml-user-select: all;
-  -moz-user-select: all;
-  -ms-user-select: all;
-  user-select: all;
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
 }
 
 textarea,
 input,
 output {
-  background: white;
-  font-size: 16px;
-  font-family: Poppins, 'Segoe UI', Tahoma, Geneva;
-  border: 10px groove grey;
-  border-radius: 25px;
+    width: 100%;
+    background: white;
+    font-size: 16px;
+    width: 100%;
+    overflow-y: auto;
+    resize: none;
+    height: 200px;
+    border: 10px groove grey;
+    border-radius: 25px;
 }
 
-textarea,
 output {
-  min-height: 150px;
+    display: block;
+    word-break: break-all;
+    white-space: pre-wrap;
 }
 
-output {
-  display: block;
-  word-break: break-all;
-  white-space: pre-wrap;
+::placeholder {
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 button {
-  appearance: none;
-  border: .2em solid #ffffff;
-  background: hsl(0 0 0/0);
-  padding: .85em 1.5em;
-  color: #ffffff;
-  border-radius: 2em;
-  transition: 1s;
-  &:hover, &:focus, &:active {
+    width: 100%;
+    font-size: 20px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    appearance: none;
+    border: .2em solid #ffffff;
+    background: hsl(0 0 0/0);
+    padding: .85em 1.5em;
+    color: #ffffff;
+    border-radius: 2em;
+    transition: 0.5s;
+    &:hover
+
+{
     background: #ffffff;
     color: #000000;
-  }
+}
 }
