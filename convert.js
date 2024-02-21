@@ -1,22 +1,22 @@
 function copyToClipboard(message) {
-      navigator.clipboard.writeText(message).then(
+    navigator.clipboard.writeText(message).then(
         () => { },
         () => {
-          alert("Couldn't copy text to clipboard!");
+            alert("Couldn't copy text to clipboard!");
         }
-      );
-    }
+    );
+}
 
-    function handleCopyToClipboardClick() {
-      toCopy = document.getElementById('output').innerHTML;
-      copyToClipboard(toCopy);
-    }
+function handleCopyToClipboardClick() {
+    toCopy = document.getElementById('output').innerHTML;
+    copyToClipboard(toCopy);
+}
 
-    function handleConvertClick() {
-      var lines = input.value;
-      lines = lines.split("\n");
+function handleConvertClick() {
+    var lines = input.value;
+    lines = lines.split("\n");
 
-      for (var i = 0; i < lines.length; i++) {
+    for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
 
         line = line.split(" ");
@@ -25,16 +25,15 @@ function copyToClipboard(message) {
         line = line.join("\t");
         console.log(line);
         lines[i] = line;
-      }
-      lines = lines.join("\n");
-      output.value = lines;
-
     }
+    lines = lines.join("\n");
+    output.value = lines;
 
-    const input = document.getElementById("input");
-    const output = document.getElementById("output");
-    const copy_to_clipboard_button = document.getElementById("copy_to_clipboard_button");
-    const convert = document.getElementById("convert");
+}
 
-    convert.addEventListener('click', handleConvertClick);
-    copy_to_clipboard_button.addEventListener('click', handleCopyToClipboardClick);
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+const copy_to_clipboard_button = document.getElementById("copy_to_clipboard_button");
+
+//convert.addEventListener('click', handleConvertClick);
+copy_to_clipboard_button.addEventListener('click', handleCopyToClipboardClick);
