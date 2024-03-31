@@ -1,3 +1,5 @@
+
+
 function copyToClipboard(message) {
     navigator.clipboard.writeText(message).then(
         () => { },
@@ -37,3 +39,16 @@ const copy_to_clipboard_button = document.getElementById("copy_to_clipboard_butt
 
 //convert.addEventListener('click', handleConvertClick);
 copy_to_clipboard_button.addEventListener('click', handleCopyToClipboardClick);
+
+$("#copy_to_clipboard_button").click(function () {
+    $('#circle').animate(
+        { width: "100%"}, 400, function () {
+            $('#circle').animate(
+                { opacity: "0" }, 300, function () {
+                    circle.style.opacity = "100%";
+                    circle.style.width = "0";
+                }
+            )
+        }
+    )
+});

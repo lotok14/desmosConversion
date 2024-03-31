@@ -9,11 +9,15 @@ img {
 
 html,
 body {
+    overflow: clip;
     scrollbar-color: #000000 #ffffff;
-    background-color: #000000;
     margin: 0;
     padding: 0;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body{
+    background-color: black;
 }
 
 div {
@@ -49,6 +53,7 @@ output {
 }
 
 output {
+    cursor: pointer;
     display: block;
     word-break: break-all;
     white-space: pre-wrap;
@@ -62,20 +67,55 @@ output {
 }
 
 button {
+    cursor: pointer;
     width: 100%;
     font-size: 20px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     appearance: none;
     border: .2em solid #ffffff;
-    background: hsl(0 0 0/0);
+    background-color: black;
     padding: .85em 1.5em;
     color: #ffffff;
     border-radius: 2em;
-    transition: 0.5s;
-    &:hover
-
-{
-    background: #ffffff;
-    color: #000000;
+    z-index: 2;
+    overflow: clip;
+    position: relative;
+    transition: 0.4s;
 }
+
+button:hover{
+    color: black;
+    border-color: grey;
+}
+
+button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    z-index: -1;
+    transition: 0.35s;
+    width: 0%;
+}
+
+button:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+#circle {
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: lightpink;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: inherit;
+    z-index: -1;
 }
